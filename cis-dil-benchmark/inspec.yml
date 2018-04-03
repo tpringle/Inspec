@@ -1,0 +1,9 @@
+name: cis-dil-benchmark
+title: CIS Distribution Independent Linux Benchmark Profile
+maintainer:   Tim Pringle
+# comments: Reworked dev-sec/cis-dil-benchmark to allow it to run on Inspec version 2.0.4.5
+copyright: Coolblue B.V.
+copyright_email: tim.pringle@coolblue.nl
+license: Apache-2.0
+summary: An InSpec Compliance profile for the CIS Distribution Independent Linux Benchmark
+version: 0.1.0

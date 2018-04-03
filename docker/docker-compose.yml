@@ -1,0 +1,28 @@
+version: '2.0'
+
+services:
+  server:
+    image: 'jetbrains/teamcity-server' # the official JetBrains image
+    container_name: inspec_teamcity_server
+    volumes:
+      - '~/teamcity/data:/data/teamcity_server/datadir'
+      - '~/teamcity/logs:/data/teamcity/logs'
+      - '~/git/inspec:/tmp'
+    ports:
+      - "8111:8111"
+      - "1111:22"
+    environment:
+      - TEAMCITY_SERVER_MEM_OPTS="-Xmx750m"
+  agent:
+    image: 'jetbrains/teamcity-minimal-agent' #the official JetBrains image
+    container_name: inspec_teamcity_agent
+    volumes:
+      - '~/git/inspec:/tmp'
+    environment:
+      - SERVER_URL=server:8111
+  centos:
+    image: 'kinogmt/centos-ssh'
+    container_name: inspec_teamcity_node
+    volumes:
+      - '~/git/inspec:/tmp'
+    command: tail -f /dev/null
