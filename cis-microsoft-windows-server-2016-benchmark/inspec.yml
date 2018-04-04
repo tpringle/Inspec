@@ -1,0 +1,8 @@
+name: CIS Microsoft Windows Server 2016 RTM Benchmark version 1.0.0
+title: CIS Microsoft Windows Server 2016 RTM Benchmark Profile
+maintainer:   Tim Pringle
+copyright: Coolblue B.V.
+copyright_email: tim.pringle@coolblue.nl
+license: Apache-2.0
+summary: An InSpec Compliance profile for the CCIS Microsoft Windows Server 2016 RTM Benchmark
+version: 0.1.0
